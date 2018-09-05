@@ -6,7 +6,19 @@ a biodiversity dataset graph created with [Preston](https://github.com/bio-guoda
 This repository was created with the following recipe:
 
 * Download a preston jar from https://github.com/bio-guoda/preston/releases/download/0.0.3/preston.jar .
-* In a terminal, run ```preston update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"```
+* In a terminal, run preston to update the graph of biodiversity datasets.
+
+```console
+$ preston update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"
+<https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#SoftwareAgent> .
+<https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
+<https://preston.guoda.org> <http://purl.org/dc/terms/description> "Preston is a software program that finds, archives and provides access to biodiversity datasets."@en .
+<83e11589-3579-47d8-ad5b-126e640112cd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Activity> .
+<83e11589-3579-47d8-ad5b-126e640112cd> <http://purl.org/dc/terms/description> "A crawl event that discovers biodiversity archives."@en .
+<83e11589-3579-47d8-ad5b-126e640112cd> <http://www.w3.org/ns/prov#startedAtTime> "2018-09-05T09:42:39.614Z"^^<http://www.w3.org/2001/XMLSchema#dateTime> .
+...
+```
+
 * You have now installed some occurrence datasets related to the Amazon using the GBIF dataset registry
 * Locate a dwca in the biodiversity dataset graph using:
 
