@@ -1,0 +1,155 @@
+<eml:eml xmlns:eml="eml://ecoinformatics.org/eml-2.1.1"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="eml://ecoinformatics.org/eml-2.1.1 http://rs.gbif.org/schema/eml-gbif-profile/1.1/eml.xsd"
+         packageId="58414378-4fb2-47e0-8dd5-8b55d5c77117/v3.2" system="http://gbif.org" scope="system"
+         xml:lang="eng">
+
+<dataset>
+  <alternateIdentifier>BFE_105</alternateIdentifier>
+  <alternateIdentifier>doi:10.13148/bfe105</alternateIdentifier>
+  <alternateIdentifier>58414378-4fb2-47e0-8dd5-8b55d5c77117</alternateIdentifier>
+  <alternateIdentifier>http://data.freshwaterbiodiversity.eu/ipt/resource?r=bfe_105</alternateIdentifier>
+  <title xml:lang="eng">Bolivian Amazon lowland fish metacommunity data</title>
+      <creator>
+    <individualName>
+      <surName>Please contact the meta data provider.</surName>
+    </individualName>
+    <organizationName>Universidad Autónoma del Beni `José Ballivian´ (CIRA-UAB)</organizationName>
+    <address>
+        <deliveryPoint>Campus Universitario, Trinidad, Beni, Bolivia</deliveryPoint>
+        <postalCode>Trinidad</postalCode>
+        <country>BO</country>
+    </address>
+      </creator>
+      <metadataProvider>
+    <individualName>
+        <givenName>Takayuki</givenName>
+      <surName>Yunoki</surName>
+    </individualName>
+    <phone>591-3-4639205</phone>
+    <electronicMailAddress>takayukiyunoki@yahoo.com</electronicMailAddress>
+      </metadataProvider>
+      <associatedParty>
+    <individualName>
+      <surName>Yunoki, T. and  Torres L. V.</surName>
+    </individualName>
+    <role>author</role>
+      </associatedParty>
+  <pubDate>
+      2017-09-08
+  </pubDate>
+  <language>eng</language>
+  <abstract>
+    <para>This dataset represents data from the paper Yukoni, T. and Torres L. V. (2016) Fish metacommunity dynamics in the patchy heterogeneous habitats of varzea lakes, turbid river channels and transparent clear and black water bodies in the Amazonian Lowlands of Bolivia. Environmental Biology of Fishes.</para>
+    <para>This study documents the spatial dynamic of fish metacommunity based on the date sets of 65 sites, covering two geographic patches of transparent water valleys; Manuripi and Itenez Rivers, separated by turbid water valleys originate in the Andes and the Savanna.</para>
+    <para>See http://www.freshwaterbiodiversity.eu/metadb/bf_mdb_view.php?entryID=BFE_105 for additional metadata.</para>
+  </abstract>
+      <keywordSet>
+            <keyword>Fish</keyword>
+            <keyword>Amazon</keyword>
+            <keyword>traits</keyword>
+            <keyword>rivers</keyword>
+        <keywordThesaurus>N/A</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Biosphere</keyword>
+            <keyword>Biological Classification</keyword>
+        <keywordThesaurus>http://gcmd.nasa.gov/User/difguide/</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Biota</keyword>
+            <keyword>Inland Waters</keyword>
+        <keywordThesaurus>http://gcmd.nasa.gov/User/difguide/iso_topics.html</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Occurrence</keyword>
+        <keywordThesaurus>GBIF Dataset Type Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_type.xml</keywordThesaurus>
+      </keywordSet>
+      <keywordSet>
+            <keyword>Observation</keyword>
+        <keywordThesaurus>GBIF Dataset Subtype Vocabulary: http://rs.gbif.org/vocabulary/gbif/dataset_subtype.xml</keywordThesaurus>
+      </keywordSet>
+  <additionalInfo>
+    <para>Data provider must be informed of publication 45 days in advance and can
+object to the use of the dataset within 30 days. Data must be publicly
+acknowledged and cited correctly.</para>
+  </additionalInfo>
+  <intellectualRights>
+    <para>To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the <ulink url="http://creativecommons.org/publicdomain/zero/1.0/legalcode"><citetitle>Public Domain (CC0 1.0)</citetitle></ulink>. Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.</para>
+  </intellectualRights>
+  <distribution scope="document">
+    <online>
+      <url function="information">http://data.freshwaterbiodiversity.eu/data/BFE_105-Bolivian_fish</url>
+    </online>
+  </distribution>
+  <coverage>
+      <geographicCoverage>
+          <geographicDescription>Decimal degrees, GCS_WGS_1984</geographicDescription>
+        <boundingCoordinates>
+          <westBoundingCoordinate>-69.007</westBoundingCoordinate>
+          <eastBoundingCoordinate>-62.755</eastBoundingCoordinate>
+          <northBoundingCoordinate>-11.14</northBoundingCoordinate>
+          <southBoundingCoordinate>-15.895</southBoundingCoordinate>
+        </boundingCoordinates>
+      </geographicCoverage>
+          <taxonomicCoverage>
+              <generalTaxonomicCoverage>Fish</generalTaxonomicCoverage>
+              <taxonomicClassification>
+                <taxonRankValue>Fish</taxonRankValue>
+              </taxonomicClassification>
+          </taxonomicCoverage>
+  </coverage>
+  <maintenance>
+    <description>
+      <para></para>
+    </description>
+    <maintenanceUpdateFrequency>notPlanned</maintenanceUpdateFrequency>
+  </maintenance>
+
+      <contact>
+    <individualName>
+      <surName>Please contact the meta data provider.</surName>
+    </individualName>
+    <organizationName>Universidad Autónoma del Beni `José Ballivian´ (CIRA-UAB)</organizationName>
+    <address>
+        <deliveryPoint>Campus Universitario, Trinidad, Beni, Bolivia</deliveryPoint>
+        <postalCode>Trinidad</postalCode>
+        <country>BO</country>
+    </address>
+      </contact>
+  <methods>
+        <methodStep>
+          <description>
+            <para>commonly used series of methods steps regarding fish (e.g. sampling, identification, data management)</para>
+          </description>
+        </methodStep>
+      <sampling>
+        <studyExtent>
+          <description>
+            <para>sample specification: quantitative (abundance data)
+replicate samples: no</para>
+          </description>
+        </studyExtent>
+        <samplingDescription>
+          <para>specification of method(s) used for sampling and sorting: At each site, gill nets were deployed for 2 h each in the evening
+(17:30-19:30) and the morning (5:30-7:30). Gill nets (25 m long by 2.5 m high) extended from the lakeshore or were placed in calm areas of
+the river channel. Fish were sampled using 13 nets of varying mesh sizes: 10, 15, 20, 25, 30, 35, 40, 50, 60, 70, 80, 90 and 110 mm.
+CPUE was calculated for each species and site as the total number of
+individuals captured in all gill nets during 4 h (2 h each in morning and
+evening).</para>
+        </samplingDescription>
+      </sampling>
+  </methods>
+</dataset>
+  <additionalMetadata>
+    <metadata>
+      <gbif>
+          <dateStamp>2015-02-25T02:41:41.000+01:00</dateStamp>
+          <hierarchyLevel>dataset</hierarchyLevel>
+            <citation identifier="doi:10.13148/bfe105">BioFresh (publisher), Yunoki, T. and  Torres L. V. (provider), Universidad Autónoma del Beni &apos;José Ballivian&apos; (CIRA-UAB) (owner)  (2015). Bolivian Amazon lowland fish metacommunity data. Published on http://data.freshwaterbiodiversity.eu, accessed on [date].</citation>
+          <dc:replaces>58414378-4fb2-47e0-8dd5-8b55d5c77117/v3.2.xml</dc:replaces>
+      </gbif>
+    </metadata>
+  </additionalMetadata>
+</eml:eml>
