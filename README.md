@@ -5,11 +5,11 @@ a biodiversity dataset graph created with [Preston](https://github.com/bio-guoda
 
 This repository was created with the following recipe:
 
-* Download a preston jar from https://github.com/bio-guoda/preston/releases/download/0.0.3/preston.jar .
+* Download a preston jar from https://github.com/bio-guoda/preston/releases/download/0.0.10/preston.jar .
 * In a terminal, run preston to update the graph of biodiversity datasets.
 
 ```console
-$ java -jar preston update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"
+$ java -jar preston.jar update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"
 <https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#SoftwareAgent> .
 <https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
 <https://preston.guoda.org> <http://purl.org/dc/terms/description> "Preston is a software program that finds, archives and provides access to biodiversity datasets."@en .
@@ -23,7 +23,7 @@ $ java -jar preston update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;
 * Locate a dwca in the biodiversity dataset graph using:
 
 ```console 
-$ java -jar preston ls -l tsv | grep "application/dcwa" | cut -f1 | tail -n1```.
+$ java -jar preston.jar ls -l tsv | grep "application/dcwa" | cut -f1 | tail -n1```.
 http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip
 ```
 
