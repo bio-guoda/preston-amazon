@@ -6,10 +6,10 @@ a biodiversity dataset graph created with [Preston](https://github.com/bio-guoda
 This repository was created with the following recipe:
 
 * Download a preston jar from https://github.com/bio-guoda/preston/releases/download/0.0.10/preston.jar .
-* In a terminal, run preston to update the graph of biodiversity datasets.
+* In a terminal, run preston to track a graph of biodiversity occurrence datasets related to the Amazon using GBIF's api:
 
 ```console
-$ java -jar preston.jar update "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"
+$ java -jar preston.jar track "http://api.gbif.org/v1/dataset/suggest?q=Amazon&amp;type=OCCURRENCE"
 <https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#SoftwareAgent> .
 <https://preston.guoda.org> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/prov#Agent> .
 <https://preston.guoda.org> <http://purl.org/dc/terms/description> "Preston is a software program that finds, archives and provides access to biodiversity datasets."@en .
@@ -30,14 +30,16 @@ http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip
 * Now, explore the version of a single archive using:
 
 ```console
-$ java -jar preston history http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip``` , which results in:
+$ java -jar preston.jar ls | grep "http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip"``` 
+<663199f1-3528-4289-8069-d27552f62f10> <http://www.w3.org/ns/prov#hadMember> <http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> .
+<http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> <http://purl.org/dc/elements/1.1/format> "application/dwca" .
 <http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> <http://purl.org/pav/hasVersion> <hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98> .
 ```
 
 * Get the content-addressed file and list its content using:
 
 ```console
-$ java -jar preston get hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98 > dwca.zip ```
+$ java -jar preston.jar get hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98 > dwca.zip ```
 $ unzip -l dwca.zip
 Archive:  dwca.zip
   Length      Date    Time    Name
