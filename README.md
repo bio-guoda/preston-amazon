@@ -2,10 +2,10 @@
 A sample biodiversity dataset graph created with [Preston](https://github.com/bio-guoda/preston).
 
 # introduction
-This repository provides a small subset of biodiversity datasets registered with the [GBIF](https://gbif.org). The purposes is to show an example of (1) how to track datasets using Preston and (2) how to process these tracked datasets. 
+This repository provides a small subset of biodiversity datasets registered with the [GBIF](https://gbif.org). The purposes is to show an example of (1) how to [track datasets](tracking-data) using Preston and (2) how to [pre-process](#pre-processing-data) and (3) [analyze](#analyzing-data) these tracked datasets. 
 
 
-# track datasets
+# tracking data
 
 The ```data``` directory contains original datasets and provanance information created with the help of Preston using the following recipe:
 
@@ -63,9 +63,9 @@ Archive:  dwca.zip
 
 * for more information, see https://github.com/bio-guoda/preston .
 
-# pre-processing tracked datasets for analysis
+# pre-processing data
 
-Now that we have a collection of datasets of known provenance, we can use [Apache Spark](https://apache.spark.org) to transform the data for further analysis. This particular collection contains Darwin Core Archives. These archives are typically distributed using zip archives. To prepare these Darwin Core archives for processing, the following steps are taken:  
+Now that we have a collection of datasets of known provenance, we use [Apache Spark](https://apache.spark.org) with a [idigbio-spark](https://github.com/bio-guoda/idigbio-spark), a Spark library, to transform the data for further analysis. Our example collection contains Darwin Core Archives. These archives are typically distributed using zip archives. To prepare these Darwin Core archives for processing, the following steps are taken:  
 
 1. unzip the Darwin Core archives and bzip2 the entries
 
@@ -77,7 +77,7 @@ Now that we have a collection of datasets of known provenance, we can use [Apach
 
 Note that [Apache Parquet](https://parquet.apache.org) and [Hadoop Sequence Files](https://wiki.apache.org/hadoop/SequenceFile) are file formats optimized for distributed/parallel processing. 
 
-# analyzing data using [Apache Spark](https://apache.spark.org)
+# analyzing data
 
 After pre-processing the data in formats suitable for scalable analysis, we can easily discover meta-data in eml.xml and meta.xml files. Also, the data itself can be queried similar to a database using Spark supported languages like python, R, java, and scala . For the examples below, we'll use pyspark, an interactive Spark python shell . For information how to install / start pyspark, see https://spark.apache.org/docs/latest/#running-the-examples-and-shell . 
 
