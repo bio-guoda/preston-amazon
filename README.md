@@ -65,7 +65,7 @@ Archive:  dwca.zip
 
 # pre-processing data
 
-Now that we have a collection of datasets of known provenance, we use [Apache Spark](https://apache.spark.org) with a [idigbio-spark](https://github.com/bio-guoda/idigbio-spark), a Spark library, to transform the data for further analysis. Our example collection contains Darwin Core Archives. These archives are typically distributed using zip archives. To prepare these Darwin Core archives for processing, the following steps are taken:  
+Now that we have a collection of datasets of known provenance, we use [Apache Spark](https://apache.spark.org) with a [idigbio-spark](https://github.com/bio-guoda/idigbio-spark), a Spark library, to transform the data for further analysis. Our example collection contains Darwin Core Archives. These archives are typically distributed using zip archives. To prepare these Darwin Core archives for analysis, we take following steps pre-processing steps:  
 
 1. unzip the Darwin Core archives and bzip2 the entries
 
