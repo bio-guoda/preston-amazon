@@ -2,7 +2,7 @@
 A sample biodiversity dataset graph created with [Preston](https://github.com/bio-guoda/preston).
 
 # introduction
-This repository provides a small subset of biodiversity datasets registered with the [GBIF](https://gbif.org). The purposes is to show an example of (1) how to [track datasets](tracking-data) using Preston and (2) how to [pre-process](#pre-processing-data) and (3) [analyze](#analyzing-data) these tracked datasets. 
+This repository provides a small subset of biodiversity datasets registered with the [GBIF](https://gbif.org). The purposes is to show an example of (1) how to [track datasets](#tracking-data) using Preston and (2) how to [pre-process](#pre-processing-data) and (3) [analyze](#analyzing-data) these tracked datasets. 
 
 
 # tracking data
