@@ -69,9 +69,9 @@ Now that we have a collection of datasets of known provenance, we use [Apache Sp
 
 1. unzip the Darwin Core archives and bzip2 the entries
 
-2. collect data schemas from all ```meta.xml``` files into [meta.xml.seq](./data-unpacked/meta.xml.seq)
+2. collect data schemas from all ```meta.xml``` files into [meta.xml.seq](./data-processed/meta.xml.seq)
 
-3. use data schemas to convert core tables of the datasets to individual ```core.parquet``` files (e.g., [core.parquet](./data-unpacked/22/0f/220f6dd60ceba458c9b942e205675773d336ab3b0227e3fc04e7c854c85811ad/core.parquet))
+3. use data schemas to convert core tables of the datasets to individual ```core.parquet``` files (e.g., [core.parquet](./data-processed/22/0f/220f6dd60ceba458c9b942e205675773d336ab3b0227e3fc04e7c854c85811ad/core.parquet))
 
 4. combine all the individual ```core.parquet``` files into a single ```core.parquet``` (e.g., [core.parquet](./core.parquet)) 
 
@@ -85,7 +85,7 @@ After pre-processing the data in formats suitable for scalable analysis, we can 
 
 
 ```python
->>> datasets = spark.read.parquet("file:///some/path/preston-amazon/data-unpacked/core.parquet") # load aggregate data
+>>> datasets = spark.read.parquet("file:///some/path/preston-amazon/data-processed/core.parquet") # load aggregate data
 >>> datasets.count() # count all rows
 3858
 >>> datasets.columns # print columns
@@ -114,10 +114,10 @@ only showing top 10 rows
 
 ## meta-data
 
-Preston data was pre-processed using a dedicated spark library, [idigbio-spark](https://github.com/bio-guoda/idigbio-spark). This library helps create sequence files of meta.xml and emls files in a Preston archive. The advantage of sequence files is that you can quickly iterate over many items. Large Preston archives consist of hundreds of thousands or millions of small meta-data files. Accessing these files individually can be done through Spark, but is very slow due to IO and memory overhead. The ```data-unpacked/meta.xml.seq``` files contain tuples/pairs of originating data archive content hash and the content of their meta.xml file. To access this data:
+Preston data was pre-processed using a dedicated spark library, [idigbio-spark](https://github.com/bio-guoda/idigbio-spark). This library helps create sequence files of meta.xml and emls files in a Preston archive. The advantage of sequence files is that you can quickly iterate over many items. Large Preston archives consist of hundreds of thousands or millions of small meta-data files. Accessing these files individually can be done through Spark, but is very slow due to IO and memory overhead. The ```data-processed/meta.xml.seq``` files contain tuples/pairs of originating data archive content hash and the content of their meta.xml file. To access this data:
 
 ```python
->>> metas = sc.sequenceFile("files:///some/path/preston-amazon/data-unpacked/meta.xml.seq") # create the meta.xml RDD with (hash, xml string) tuples
+>>> metas = sc.sequenceFile("files:///some/path/preston-amazon/data-processed/meta.xml.seq") # create the meta.xml RDD with (hash, xml string) tuples
 >>> metas.map( lambda pair: pair[0] ).distinct().count() # count number of unique archive content hashes
 37
 >>> print(metas.map( lambda pair: pair[1] ).first()) # print the first meta.xml file
