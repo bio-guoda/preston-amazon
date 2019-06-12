@@ -27,7 +27,7 @@ $ java -jar preston.jar track "http://api.gbif.org/v1/dataset/suggest?q=Amazon&a
 * Locate a dwca in the biodiversity dataset graph using:
 
 ```console 
-$ java -jar preston.jar ls -l tsv | grep "application/dcwa" | cut -f1 | tail -n1```.
+$ java -jar preston.jar ls -l tsv | grep "application/dwca" | cut -f1 | tail -n1```.
 http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip
 ```
 
