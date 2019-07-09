@@ -27,14 +27,14 @@ $ java -jar preston.jar track "http://api.gbif.org/v1/dataset/suggest?q=Amazon&a
 * Locate a dwca in the biodiversity dataset graph using:
 
 ```console 
-$ java -jar preston.jar ls -l tsv | grep "application/dwca" | cut -f1 | tail -n1```.
+$ java -jar preston.jar ls -l tsv | grep "application/dwca" | cut -f1 | tail -n1
 http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip
 ```
 
 * Now, explore the version of a single archive using:
 
 ```console
-$ java -jar preston.jar ls | grep "http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip"``` 
+$ java -jar preston.jar ls | grep "http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip"
 <663199f1-3528-4289-8069-d27552f62f10> <http://www.w3.org/ns/prov#hadMember> <http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> .
 <http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> <http://purl.org/dc/elements/1.1/format> "application/dwca" .
 <http://plazi.cs.umb.edu/GgServer/dwca/341C9C4FFFDDFFEF8D1DFFCBCB25FF90.zip> <http://purl.org/pav/hasVersion> <hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98> .
@@ -43,7 +43,7 @@ $ java -jar preston.jar ls | grep "http://plazi.cs.umb.edu/GgServer/dwca/341C9C4
 * Get the content-addressed file and list its content using:
 
 ```console
-$ java -jar preston.jar get hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98 > dwca.zip ```
+$ java -jar preston.jar get hash://sha256/e96d41772596daee7ebf7dd73239e236ae03c81d5ac39f8df4f911fc08776e98 > dwca.zip
 $ unzip -l dwca.zip
 Archive:  dwca.zip
   Length      Date    Time    Name
