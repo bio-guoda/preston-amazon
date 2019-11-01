@@ -77,6 +77,8 @@ Now that we have a collection of datasets of known provenance, we use [Apache Sp
 
 Note that [Apache Parquet](https://parquet.apache.org) and [Hadoop Sequence Files](https://wiki.apache.org/hadoop/SequenceFile) are file formats optimized for distributed/parallel processing. 
 
+See https://github.com/bio-guoda/preston-amazon and https://github.com/bio-guoda/preston-scripts for examples.  
+
 # analyzing data
 
 After pre-processing the data in formats suitable for scalable analysis, we can easily discover meta-data in eml.xml and meta.xml files. Also, the data itself can be queried similar to a database using Spark supported languages like python, R, java, and scala . For the examples below, we'll use pyspark, an interactive Spark python shell . For information how to install / start pyspark, see https://spark.apache.org/docs/latest/#running-the-examples-and-shell . 
